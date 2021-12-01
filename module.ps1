@@ -20,7 +20,7 @@ function Set-ProfilerEnvironmentVariables {
     [Environment]::SetEnvironmentVariable("ELASTIC_APM_PROFILER_HOME", "$ProfilerDirectory", "Machine")
     [Environment]::SetEnvironmentVariable("ELASTIC_APM_PROFILER_INTEGRATIONS", "$ProfilerDirectory\integrations.yml", "Machine")
     [Environment]::SetEnvironmentVariable("ELASTIC_APM_PROFILER_LOG_DIR", "$ProfilerDirectory\logs", "Machine")
-    [Environment]::SetEnvironmentVariable("ELASTIC_APM_PROFILER_LOG", "trace", "Machine")
+    [Environment]::SetEnvironmentVariable("ELASTIC_APM_PROFILER_LOG", $LogLevel, "Machine")
     [Environment]::SetEnvironmentVariable("ELASTIC_APM_PROFILER_EXCLUDE_PROCESSES", "devenv.exe;Microsoft.ServiceHub.Controller.exe;ServiceHub.Host.CLR.exe;ServiceHub.TestWindowStoreHost.exe;ServiceHub.DataWarehouseHost.exe;sqlservr.exe;VBCSCompiler.exe;iisexpresstray.exe;msvsmon.exe", "Machine")
     [Environment]::SetEnvironmentVariable("COMPlus_LoaderOptimization", "1", "Machine")
 }
